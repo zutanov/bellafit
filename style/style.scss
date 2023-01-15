@@ -1,0 +1,295 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans';
+}
+
+.container {
+    max-width: 1660px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.grid {
+    display: grid;
+}
+button {
+    background: none;
+    border: none;
+}
+.btn {    
+    font-family: 'Bebas Neue';
+    font-size: 20px;
+    line-height: 36px;
+    letter-spacing: 5px;
+    text-transform: capitalize;
+    color: #100E18;
+    font-weight: 400;
+    &_sunny {
+        height: 76px;
+        background: #FAFF05;
+    }
+    &_garnet {
+        color: #C4140F;
+    }
+}
+.logo {
+    display: flex;
+    align-items: center;
+    &__title {
+        margin-left: 12px;
+        font-family: 'K2D';
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+        color: #100E18;
+        font-style: normal;
+    }
+}
+.card {
+    position: relative;
+    height: 336px;
+    width: 320px;
+    padding: 50px;
+    border-top: 2px solid #FAFF05;
+    
+    &__title {
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        font-size: 36px;
+    }
+    &__desc {
+        margin: 20px 0 40px;
+        font-weight: 400;
+        line-height: 32px;
+        color: #8A8A8A;
+        font-size: 18px;
+    }
+    &__choice {
+        display: none;
+        align-items: center;
+        & svg {
+            margin-left: 22px;
+        }
+    }
+    &:hover {
+        transition: 0.8s;
+        background: #FAFF05;
+        .card__choice {
+            display: flex;
+        }
+        .card__title {
+            color: #100E18;
+        }
+        .card__desc {
+            color: #100E18;
+        }
+
+    }
+}
+
+.header{
+    &__discount {
+        padding: 8px 0;
+        background: #FAFF05;
+        text-align: center;
+    }
+    &__title {
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: capitalize;
+        color: #100E18;
+        font-size: 14px;
+    }  
+    &__menu {
+        padding: 22px 0;
+    }
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    } 
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    &__nav {
+        margin-right: 347px;
+    }
+    &__link {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 36px;
+        color: #100E18;
+        &:not(:last-child) {
+            margin-right: 70px;
+        }
+        &_discount {
+            position: relative;
+            &::before {
+                content: "20%";
+                position: absolute;
+                top: -5px;
+                right: -23px;
+                font-weight: 400;
+                line-height: 18px;
+                text-transform: capitalize;
+                color: #C4140F;
+                font-size: 12px;
+            }
+        }
+    }
+    &__auth {
+        display: flex;
+        align-items: center;
+        & svg {
+            margin-left: 36px;
+        }
+    }
+    &__icon_shop {
+        position: relative;
+        &::before {
+            content: "2";
+            padding-left: 6px;
+            position: absolute;
+            height: 20px;
+            width: 14px;
+            right: -15px;
+            top: -8px;
+            background: #FAFF05;
+            border-radius: 2px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            text-transform: capitalize;
+            color: #100E18;           
+        }
+    }
+}
+
+.hero {
+    height: calc(100vh - 120px);
+    background: #C4140F;
+    position: relative;
+    &__fitness {
+        text-align: center;
+        left: 122px;
+        right: 0;
+        bottom: 222px;
+        font-family: 'Bebas Neue';
+        color: #C4140F;
+        text-shadow: 0px 0px 0px #fff;
+        font-weight: 400;
+        font-size: 280px;
+        line-height: 336px;
+        letter-spacing: 140px;
+        text-transform: capitalize;
+        opacity: 0.9;
+        position: absolute;
+    }
+    &__grid {
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+    }
+    &__bg {
+        position: relative;
+    }
+    &__border {
+        position: absolute;
+        width: 535px;
+        height: 650px;
+        bottom: 0;
+        border: 50px solid #FAFF05;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0;
+        left: 75px;
+    }
+    &__info {
+        height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__page {
+        position: relative;
+        font-weight: 400;
+        line-height: 36px;
+        color: #FFFFFF;
+        font-size: 24px;
+        &::before {
+            content: "";
+            top: 96px;
+            width: 100px;
+            border: 1px solid #FAFF05;
+            position: absolute;
+        }
+    }
+    &__title {
+        margin: 120px 0 60px;
+        width: 480px;
+        font-family: 'Bebas Neue';
+        font-size: 64px;
+        line-height: 80px;
+        letter-spacing: 0.15em;
+        text-transform: capitalize;
+        color: #FFFFFF;
+        font-weight: 400;
+    }
+    &__btn {
+        width: 229px;
+    }
+}
+
+.about {
+    background: #fff;
+    padding: 180px 0;
+    &__container {
+        text-align: center;
+    }
+    &__title {
+        font-family: 'Bebas Neue';
+        font-size: 22px;
+        line-height: 40px;
+        letter-spacing: 0.15em;
+        text-transform: capitalize;
+        color: #8A8A8A;
+        font-weight: 400;
+    }
+    &__desc {
+        width: 1324px;
+        padding: 50px 0;
+        margin: 0 auto;
+        font-weight: 500;
+        line-height: 60px;
+        color: #100E18;
+        font-size: 40px;
+    }
+    &__btn {
+        width: 264px;
+    }
+}
+
+.training {
+    padding: 421px 0 143px;
+    background: url("../images/training_bg.png") no-repeat center;
+    &__grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 40px;
+        text-align: center;
+    }
+}
